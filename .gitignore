@@ -1,0 +1,8 @@
+service_account.json
+config.py
+*.csv
+__pycache__/
+*.pyc
+.env
+custom_templates.json
+leads_tracker.csv
