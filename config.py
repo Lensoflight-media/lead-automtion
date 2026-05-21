@@ -22,7 +22,7 @@ APOLLO_INDUSTRIES = [
 
 # --- GMAIL SMTP ---
 GMAIL_ADDRESS      = os.environ.get("GMAIL_ADDRESS",      "contactlensoflight@gmail.com")
-GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "fjva xrfa sqpj atut")
+GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "hdiimayynzbduccl")
 SENDER_NAME        = os.environ.get("SENDER_NAME",        "Lens Of Light")
 
 # --- EMAIL SETTINGS ---

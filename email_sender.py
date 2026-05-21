@@ -100,7 +100,7 @@ def send_emails(leads: list[dict], tracker) -> list[dict]:
 
 def _connect_smtp():
     """Connect and authenticate with Gmail SMTP."""
-    server = smtplib.SMTP(GMAIL_SMTP_HOST, GMAIL_SMTP_PORT)
+    server = smtplib.SMTP(GMAIL_SMTP_HOST, GMAIL_SMTP_PORT, timeout=20)
     server.ehlo()
     server.starttls()
     server.ehlo()
