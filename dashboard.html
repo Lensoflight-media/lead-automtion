@@ -933,9 +933,12 @@ async function loadTemplates() {
     const res = await fetch('/api/templates');
     const data = await res.json();
     templates = data.templates || [];
-    renderTplSidebar();
-    if (templates.length) selectTplEdit(0);
-  } catch (e) {}
+    // Only render sidebar if we're on the Templates tab
+    if (document.getElementById('tplSidebar')) {
+      renderTplSidebar();
+      if (templates.length) selectTplEdit(0);
+    }
+  } catch (e) { console.error('loadTemplates error:', e); }
 }
 
 let activeTplEdit = 0;
@@ -1210,6 +1213,9 @@ async function saveDrawerChanges() {
 }
 
 // Leads tab logic is handled inside showTab above
+
+// ── INIT: preload templates on page load so Step 3 works instantly ──
+loadTemplates();
 </script>
 </body>
 </html>
